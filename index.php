@@ -133,7 +133,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!-- Header -->
     <header>
         <div class="header-container">
-            <h1>Sistem Pakar: Rekomendasi Jurusan Kuliah
+            <h1>Machine Learning : Rekomendasi Jurusan Kuliah
                 <i class="fa-solid fa-gears"></i>
             </h1>
         </div>
@@ -169,7 +169,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <footer>
         <div class="footer-container">
             <p>&copy; 2024 Sistem Pakar. All Rights Reserved.</p>
-            <p>Created by Marvell Yehezkiel Palenewen and Catherine Maria Assa</p>
+            <p>Created by Marvell Yehezkiel Palenewen dll.,</p>
         </div>
     </footer>
 
