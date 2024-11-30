@@ -1,2 +1,2 @@
 # Rekomendasi-Matakuliah
-Project akhir matakuliah Sistem Pakar
+Project akhir matakuliah Machine Learning
