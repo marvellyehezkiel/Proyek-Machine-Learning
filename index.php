@@ -256,6 +256,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Tampilkan hasil dari Python prediction
     echo "Hasil prediksi dari Python: " . $output;
 }
+// Membaca data dari CSV
+function bacaCSV($filename) {
+    $data = [];
+    if (($handle = fopen($filename, "r")) !== FALSE) {
+        $header = fgetcsv($handle); // Membaca header
+        while (($row = fgetcsv($handle)) !== FALSE) {
+            $data[] = array_combine($header, $row);
+        }
+        fclose($handle);
+    }
+    return $data;
+}
+
+$jurusanData = bacaCSV('data_jurusan.csv');
+
+// Menampilkan hasil (contoh)
+foreach ($jurusanData as $jurusan) {
+    echo "Jurusan: " . $jurusan['Jurusan'] . "<br>";
+    echo "Program Studi: " . $jurusan['Program Studi'] . "<br>";
+    echo "Bobot Matematika: " . $jurusan['Bobot Matematika'] . "<br><br>";
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -308,7 +330,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <footer>
         <div class="footer-container">
             <p>&copy; 2024 Machine Learning. All Rights Reserved.</p>
-            <p>Created by Marvell Yehezkiel Palenewen, Alessandro dan Sisilia</p>
+            <p>Created by Marvell Palenewen, Alessandro Bojoh dan Sisilia Salilo</p>
         </div>
     </footer>
 
