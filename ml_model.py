@@ -9,8 +9,10 @@ import joblib
 data = pd.read_csv('data_jurusan.csv')
 
 # Pisahkan fitur dan target
-X = data[['matematika', 'bahasa_indonesia', 'bahasa_inggris', 'fisika']]
-y = data['jurusan']
+X = data[['Bobot Bahasa Indonesia', 'Bobot Matematika', 'Bobot Bahasa Inggris', 
+          'Bobot Pendidikan Jasmani Olahraga dan Kesehatan', 'Bobot Sejarah', 
+          'Bobot Seni dan Budaya']]  # Kolom fitur yang sesuai dengan data Anda
+y = data['Jurusan']  # Kolom target 'Jurusan'
 
 # Lakukan standar skala pada data fitur
 scaler = StandardScaler()
